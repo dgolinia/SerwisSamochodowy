@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serwis Samochodowy</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="logo">
+        <img src="img/logo.png">
+    </div>
+
+    <div id="menu">
+        <a href="index.html"><div class="nav">Aktualności</div></a>
+        <a href="Umow_wizyte.html"><div class="nav">Umów wizytę</div></a>
+        <a href="Galeria.html"><div class="nav">Galeria</div></a>
+        <a href="Kontakt.html"><div class="nav">Kontakt</div></a>
+        <a href="Onas.html"><div class="nav">O nas</div></a>
+    </div>
+
+    <div class="clear"></div>
+    <div id="content">
+        <header>
+            <h1>O firmie</h1>
+        </header>
+
+        <div class="notatki2">
+            <h2>Witamy w naszym serwisie samochodowym XYZ</h2>
+            <p>
+                Nasza firma serwisowa XYZ specjalizuje się w kompleksowej obsłudze samochodów różnych marek i modeli. Zatrudniamy wykwalifikowany zespół mechaników, 
+                którzy posiadają bogate doświadczenie w branży motoryzacyjnej. Naszym priorytetem jest zapewnienie wysokiej jakości usług naprawczych i obsługi klienta.
+            </p>
+            <p>
+                W naszym serwisie samochodowym XYZ dokładamy wszelkich starań, aby Twoje auto było w doskonałej kondycji. Oferujemy szeroki zakres usług, w tym przeglądy
+                 techniczne, naprawy mechaniczne, wymianę części, diagnostykę komputerową, serwis klimatyzacji, a także wiele innych usług związanych z samochodami.
+            </p>
+            <p>
+                Jesteśmy dumni z naszej solidnej reputacji i zaufania, jakim nas obdarzają nasi zadowoleni klienci. Stawiamy na profesjonalizm, rzetelność i uczciwość w 
+                naszej pracy. Naszym celem jest zapewnienie Ci bezpiecznej i sprawnej jazdy, dlatego dbamy o wysoką jakość wykonywanych przez nas usług.
+            </p>
+          </div>
+
+          <div class="notatki2">
+            <h2>Profesjonalizm i zaangażowanie</h2>
+            <p>
+                Nasz zespół składa się z doświadczonych i wysoko wykwalifikowanych mechaników, którzy kładą nacisk na profesjonalizm i precyzję w każdym detalu. Bez względu
+                 na rozmiar problemu, podejmujemy się naprawy i obsługi pojazdów z pełnym zaangażowaniem. Nasz priorytet to Twój komfort i bezpieczeństwo na drodze.
+            </p>
+            <p>
+                W naszym serwisie samochodowym XYZ stawiamy na otwartą komunikację z naszymi klientami. Jesteśmy gotowi odpowiedzieć na Twoje pytania, wyjaśnić wszelkie 
+                wątpliwości i doradzić najlepsze rozwiązania. Nasza przyjazna obsługa klienta jest zawsze gotowa służyć Ci pomocą i zapewnić Ci pełne zadowolenie z naszych usług.
+            </p>
+          </div>
+          
+          <div class="notatki2">
+            <h2>Jakość i bezpieczeństwo</h2>
+            <p>
+                Nasza firma serwisowa XYZ przykłada ogromną wagę do jakości świadczonych usług. Wykorzystujemy tylko wysokiej jakości części i materiały, aby zapewnić długotrwałe 
+                i niezawodne naprawy. Ponadto, dbamy o przestrzeganie najwyższych standardów bezpieczeństwa, aby zapewnić, że Twój samochód jest w idealnym stanie technicznym i gotowy do podróży.
+            </p>
+            <p>
+                Przywiązujemy również dużą wagę do terminowości i efektywności. Rozumiemy, że Twój czas jest cenny, dlatego dokładamy wszelkich starań, aby przeprowadzić naprawy i przeglądy 
+                w możliwie najkrótszym czasie, bez utraty jakości. Dzięki temu możesz szybko wrócić na drogę i cieszyć się bezproblemową jazdą.
+            </p>
+          </div>
+    </div>
+
+    <div id="footer">
+        <img src="img/orlen-logo.png">
+        <img src="img/lotos-logo.png">
+        <img src="img/total-logo.png">
+        <img src="img/mobil-logo.png">
+        <img src="img/castrol-logo.png">
+    </div>
+
+    <script src="jquery-3.6.4.min.js"></script>
+        <script>
+            $(document).ready(function() {
+            var NavY = $('#menu').offset().top;
+            
+            var stickyNav = function(){
+            var ScrollY = $(window).scrollTop();
+                
+            if (ScrollY > NavY) { 
+                $('#menu').addClass('sticky');
+            } else {
+                $('#menu').removeClass('sticky'); 
+            }
+            };
+            
+            stickyNav();
+            
+            $(window).scroll(function() {
+                stickyNav();
+            });
+            });
+        </script>
+</body>
+</html>

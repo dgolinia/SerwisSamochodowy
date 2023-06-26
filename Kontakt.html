@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serwis Samochodowy</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="logo">
+        <img src="img/logo.png">
+    </div>
+
+    <div id="menu">
+        <a href="index.html"><div class="nav">Aktualności</div></a>
+        <a href="Umow_wizyte.html"><div class="nav">Umów wizytę</div></a>
+        <a href="Galeria.html"><div class="nav">Galeria</div></a>
+        <a href="Kontakt.html"><div class="nav">Kontakt</div></a>
+        <a href="Onas.html"><div class="nav">O nas</div></a>
+    </div>
+
+    <div class="clear"></div>
+    <div id="content">
+        <h1>Kontakt z serwisem</h1>
+
+        <div id="kontakt">
+  
+        <h3>"Nazwa firmy" Dawid Golinia</h3>
+            ul. Warsztatowa 1<br>
+            00-000 Miastowo
+        
+            <h3>Godziny pracy</h3>
+        <ul>
+            <li>od poniedziałku do piątku: 9:00 - 17:00</li>
+            <li>soboty: 9:00 - 13:00</li>
+        </ul>
+
+        <h3>Dział serwisu</h3>
+        <ul>
+            <li>E-mail: serwis@serwissamochodowy.pl</li>
+            <li>Tel: +48 123 456 789</li>
+            <li>Tel komórkowy: +48 987 654 321</li>
+        </ul>
+
+        <h3> Dział sprzedaży</h3>
+        <ul>
+            <li>E-mail: sklep@sklepsamochodowy.pl</li>
+            <li>Tel./fax +48 (32) 22 84 971</li>
+        </ul>
+        
+        <h3>Dział księgowości</h3>
+        <ul>
+            <li>E-mail: ksiegowsc@ksiegowscsamochodowa.pl</li>
+            <li>Tel./fax +48 (32) 22 84 971</li>
+            <li>Tel komórkowy: +48 111 222 333</li>
+        </ul>
+    </div>
+        <h3>Tu jesteśmy</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2441.452987870927!2d21.01691931284386!3d52.2714776544821!2m3!1f0!2f0!3
+        f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc05060a320f%3A0x291ee13d75dbdd3d!2sJagiello%C5%84ska%2082E%2C%2003-301%20Warszawa!5e0!3m2!1spl
+        !2spl!4v1685304558999!5m2!1spl!2spl"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="mapa"></iframe>
+
+    <div class="clear"></div>
+
+    <div id="formularz">
+        <h3>Formularz kontaktowy</h3>
+        
+        <form action="Zgloszenie.html">
+            <label for="name">Imię i nazwisko:</label>
+            <input type="text" id="name" name="name" required><br>
+                
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required><br>
+                
+            <label for="phone">Telefon:</label>
+            <input type="text" id="phone" name="phone" required><br>
+                
+            <label for="message">Wiadomość:</label>
+            <textarea id="message" name="message" rows="4" required></textarea><br>
+                
+            <input type="submit" value="Wyślij zgłoszenie" id="bsubmit">
+        </form>
+    </div>
+    </div>
+    
+    <div id="footer">
+        <img src="img/orlen-logo.png">
+        <img src="img/lotos-logo.png">
+        <img src="img/total-logo.png">
+        <img src="img/mobil-logo.png">
+        <img src="img/castrol-logo.png">
+    </div>
+
+    <script src="jquery-3.6.4.min.js"></script>
+        <script>
+            $(document).ready(function() {
+            var NavY = $('#menu').offset().top;
+            
+            var stickyNav = function(){
+            var ScrollY = $(window).scrollTop();
+                
+            if (ScrollY > NavY) { 
+                $('#menu').addClass('sticky');
+            } else {
+                $('#menu').removeClass('sticky'); 
+            }
+            };
+            
+            stickyNav();
+            
+            $(window).scroll(function() {
+                stickyNav();
+            });
+            });
+        </script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serwis Samochodowy</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="logo">
+        <img src="img/logo.png">
+    </div>
+
+    <div id="menu">
+        <a href="index.html"><div class="nav">Aktualności</div></a>
+        <a href="Umow_wizyte.html"><div class="nav">Umów wizytę</div></a>
+        <a href="Galeria.html"><div class="nav">Galeria</div></a>
+        <a href="Kontakt.html"><div class="nav">Kontakt</div></a>
+        <a href="Onas.html"><div class="nav">O nas</div></a>
+    </div>
+
+    <div class="clear"></div>
+    <div id="galeria_content">
+        <header>
+            <h1>Galeria</h1>
+        </header> 
+          
+        <div class="postcard">
+				
+            <div class="photo1"> 
+                <img src="img/1.jpg" alt="photo1">
+            </div>
+            
+        </div>
+
+        <div class="postcard">
+				
+            <div class="photo2"> 
+                <img src="img/2.jpg" alt="photo2">
+            </div>
+            
+        </div>
+
+        <div class="postcard">
+				
+            <div class="photo3"> 
+                <img src="img/3.jpg" alt="photo3">
+            </div>
+            
+        </div>
+
+        <div class="postcard">
+				
+            <div class="photo4"> 
+                <img src="img/4.jpg" alt="photo4">
+            </div>
+            
+        </div>
+
+        <div class="postcard">
+				
+            <div class="photo5"> 
+                <img src="img/5.jpg" alt="photo5">
+            </div>
+            
+        </div>
+
+        <div class="postcard">
+				
+            <div class="photo6"> 
+                <img src="img/6.jpg" alt="photo6">
+            </div>
+            
+        </div>
+        
+        <div class="postcard">
+				
+            <div class="photo7"> 
+                <img src="img/7.jpg" alt="photo7">
+            </div>
+            
+        </div>
+
+        <div class="postcard">
+				
+            <div class="photo8"> 
+                <img src="img/8.jpg" alt="photo8">
+            </div>
+            
+        </div>
+
+        <div class="postcard">
+				
+            <div class="photo9"> 
+                <img src="img/9.jpg" alt="photo9">
+            </div>
+            
+        </div>
+
+        <div class="postcard">
+				
+            <div class="photo10"> 
+                <img src="img/10.jpg" alt="photo10">
+            </div>
+            
+        </div>
+
+        <div class="postcard">
+				
+            <div class="photo11"> 
+                <img src="img/11.jpg" alt="photo11">
+            </div>
+            
+        </div>
+
+        <div class="postcard">
+				
+            <div class="photo7"> 
+                <img src="img/12.jpg" alt="photo12">
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <div id="footer">
+        <img src="img/orlen-logo.png">
+        <img src="img/lotos-logo.png">
+        <img src="img/total-logo.png">
+        <img src="img/mobil-logo.png">
+        <img src="img/castrol-logo.png">
+    </div>
+
+    <script src="jquery-3.6.4.min.js"></script>
+        <script>
+            $(document).ready(function() {
+            var NavY = $('#menu').offset().top;
+            
+            var stickyNav = function(){
+            var ScrollY = $(window).scrollTop();
+                
+            if (ScrollY > NavY) { 
+                $('#menu').addClass('sticky');
+            } else {
+                $('#menu').removeClass('sticky'); 
+            }
+            };
+            
+            stickyNav();
+            
+            $(window).scroll(function() {
+                stickyNav();
+            });
+            });
+        </script>
+</body>
+</html>
